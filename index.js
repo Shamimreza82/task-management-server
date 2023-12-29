@@ -52,13 +52,7 @@ async function run() {
       res.send(result);
     });
 
-    app.get("/allTask/:email", async (req, res) => {
-      const email = req.params.email;
-      console.log(email);
-      const query = { name: email };
-      const result = await allTaskCollection.find(query).toArray();
-      res.send(result);
-    });
+  
 
     app.delete("/allTask/:id", async (req, res) => {
       const id = req.params.id;
